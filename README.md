@@ -7,6 +7,10 @@
 
 Plugin for Next to automatically be able to transform `svg` files into components using the excellent [`svgr`](https://github.com/smooth-code/svgr) library.
 
+## 开始前的说明
+
+本项目是对https://github.com/Anomen/next-svgr的二开，原项目不支持传入@svgr/webpack的options选项。我加入了支持
+
 ## Table of contents
 
 - [Installation](#installation)
