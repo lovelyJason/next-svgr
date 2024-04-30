@@ -1,6 +1,6 @@
 {
   "name": "@next/with-svgr",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Plugin for NextJS to use SVG with svgr.",
   "main": "index.js",
   "repository": "https://github.com/lovelyJason/next-svgr.git",
