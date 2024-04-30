@@ -1,6 +1,6 @@
 {
-  "name": "@next/with-svgr",
-  "version": "0.0.3",
+  "name": "with-svgr",
+  "version": "0.0.2",
   "description": "Plugin for NextJS to use SVG with svgr.",
   "main": "index.js",
   "repository": "https://github.com/lovelyJason/next-svgr.git",
@@ -9,5 +9,10 @@
   "dependencies": {
     "@svgr/webpack": "^4.3.0"
   },
-  "devDependencies": {}
+  "devDependencies": {},
+  "private": false,
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
 }

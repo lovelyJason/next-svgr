@@ -17,23 +17,44 @@ Plugin for Next to automatically be able to transform `svg` files into component
 ## Installation
 
 ```bash
-npm install --save @next/with-svgr
+npm install --save with-svgr
 ```
 
 Or using yarn:
 
 ```bash
-yarn add @next/with-svgr
+yarn add with-svgr
 ```
 
 Then, import the library in your `next.config.js` file.
 
 ```js
 // next.config.js
-const withSvgr = require("@next/with-svgr");
+const withSvgr = require("with-svgr");
 
 module.exports = withSvgr({
   // your config for other plugins or the general next.js here...
+});
+```
+
+如果需要传入 options，则在第二个参数传入
+
+```js
+const nextConfig = {
+  /*
+   * ......
+   * ......
+   */
+};
+
+withSvgr(nextConfig, {
+  prettier: false,
+  svgo: false,
+  svgoConfig: {
+    plugins: [{ removeViewBox: false }],
+  },
+  titleProp: true,
+  ref: true,
 });
 ```
 
@@ -42,10 +63,10 @@ Or you can use it with [`next-compose-plugins`](https://github.com/cyrilwanner/n
 ```js
 // next.config.js
 const withPlugins = require("next-compose-plugins");
-const withSvgr = require("next-svgr");
+const withSvgr = require("with-svgr");
 
 module.exports = withPlugins([
-  withSvgr
+  withSvgr,
   // your other plugins here
 ]);
 ```
